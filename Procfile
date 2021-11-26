@@ -1,1 +1,1 @@
-web: gunicorn clt-vs-pj.wsgi
+web: gunicorn web.wsgi
