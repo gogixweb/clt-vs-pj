@@ -2,4 +2,4 @@ from django.shortcuts import render
 
 # Create your views here.
 def index(request):
-    return render(request, 'page/form.html')
+    return render(request, 'cltvspj/form.html')
