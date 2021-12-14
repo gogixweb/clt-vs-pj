@@ -1,9 +1,100 @@
 {%extends 'base.html'%} 
 
 {%block 'title'%}
-Ellum - contato
+contato
+{%endblock%}
+
+{% load static %}
+
+{%block 'styles' %}
+    .mini-logo{
+        width: 44px;
+        height: 44px;
+        margin-left: 10px;
+    }
 {%endblock%}
 
 {%block 'content'%}
-<h1>Contato</h1>
+
+<nav class="nav navbar-dark bg-black justify-content-center" style="padding: 20px; background-color:black">
+    <img src={% static 'img/ellun-logo.png' %} width="120px" height="57.2px" alt="Evolute Contabilidade">
+</nav>
+
+<div class="container" style="margin-top: 40px;">
+    
+    <div class="row">
+        <div>
+            <h3>Desenvolvido com <span style='font-size: 30px;'>&#10084;</span> por: </h3>
+        </div>
+    </div>
+    <div class="row">
+
+        <div class="col-md-3"  style="margin-bottom: 30px;">
+            <div class="card">
+                <img src={% static "img/eduardo-machado.jpeg"%} class="card-img-top" alt="Eduardo Machado">
+                <div class="card-body">
+                    <h5 class="card-title">Eduardo Machado</h5>
+                    <p class="card-text">
+                        <i>"Isso qui é um texto sem muita utilidade, porem ele está aqui"</i>
+                    </p>
+                    <div class="text-center">
+                        <a href="#"><img class="mini-logo" src={% static "img/sinal-do-linkedin.png" %}></a>
+                        <a href="#"><img class="mini-logo" src={% static "img/GitHub-Mark-64px.png" %}></a>    
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3"  style="margin-bottom: 30px;">
+            <div class="card">
+                <img src={% static "img/fernando-mota.jpeg" %} class="card-img-top" alt="Fernando Mota">
+                <div class="card-body">
+                    <h5 class="card-title">Fernando Mota</h5>
+                    <p class="card-text">
+                        <i>"Meu notebook esquenta tanto, que já estou fazendo misto nele."</i>
+                    </p>
+                    <div class="text-center">
+                        <a href="#"><img class="mini-logo" src={% static "img/sinal-do-linkedin.png" %}></a>
+                        <a href="#"><img class="mini-logo" src={% static "img/GitHub-Mark-64px.png" %}></a>    
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3"  style="margin-bottom: 30px;">
+            <div class="card">
+                <img src={% static "img/ivan-rocha.jpeg" %} class="card-img-top" alt="Ivan Rocha">
+                <div class="card-body">
+                    <h5 class="card-title">Ivan Rocha</h5>
+                    <p class="card-text">
+                        <i>"99% das pessoas riem quando apertam F13."</i>
+                    </p>
+                    <div class="text-center">
+                        <a href="#"><img class="mini-logo" src={% static "img/sinal-do-linkedin.png" %}></a>
+                        <a href="#"><img class="mini-logo" src={% static "img/GitHub-Mark-64px.png" %}></a>    
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3"  style="margin-bottom: 30px;">
+            <div class="card">
+                <img src={% static "img/william-ribeiro.jpeg" %} class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">William Ribeiro</h5>
+                    <p class="card-text">
+                        <i>"Eu não sou lá muito bom com Frontend, mas dou meus pulos"</i>
+                    </p>
+                    <div class="text-center">
+                        <a href="#"><img class="mini-logo" src={% static "img/sinal-do-linkedin.png" %}></a>
+                        <a href="#"><img class="mini-logo" src={% static "img/GitHub-Mark-64px.png" %}></a>    
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+
 {%endblock%}
