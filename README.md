@@ -10,6 +10,7 @@ Para esse projeto é necessario ter instalado o python a partir da versão <a hr
 
 <p>
 Nós recomendamos o uso de um <i>virtual enviroment</i>, para envitar conflitos com as versões das bibliotecas utilizadas. Você pode utilizar essa <a href="https://docs.python.org/3/library/venv.html">biblioteca</a> para criar o seu <i>enviroment</i>.
+
 </br>
 Usando o venv, você pode usar o seguinte comando na raiz do projeto:
 <blockquote>python -m venv venv</blockquote>
