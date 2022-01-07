@@ -1,17 +1,19 @@
 {%extends 'base.html'%} 
 
 {%block 'title'%}
-CLT VS PJ
+Ellum - CLT VS PJ
 {%endblock%}
 
 {%block 'content'%}
 <h1>CLT vs PJ</h1>
+
 <form method="POST">
     {% csrf_token %}
     <label for="team_name">PJ: </label>
     <input id="team_name" type="text" name="name_field" value=""><br>
     <label for="team_name">CLT: </label>
     <input id="team_name" type="text" name="name_field" value=""><br>
+
     <input type="submit" value="Calculate">
 </form>
     <a href="{% url 'contact' %}">
