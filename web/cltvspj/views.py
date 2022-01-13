@@ -5,4 +5,4 @@ def index(request):
     return render(request, 'cltvspj/form.html')
 
 def contact(request):
-    return render(request, 'cltvspj/contact.html')
+    return render(request, 'cltvspj/contact.html' )
