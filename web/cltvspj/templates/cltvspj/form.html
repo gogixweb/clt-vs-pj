@@ -2,21 +2,23 @@
 
 {%block 'title'%}
 Ellum - CLT VS PJ
-{%endblock%}
+{% endblock %}
 
-{%block 'content'%}
+{% block 'content' %}
 <h1>CLT vs PJ</h1>
 
 <form method="POST">
     {% csrf_token %}
-    <label for="team_name">PJ: </label>
-    <input id="team_name" type="text" name="name_field" value=""><br>
-    <label for="team_name">CLT: </label>
-    <input id="team_name" type="text" name="name_field" value=""><br>
-
+    <label for="PJ">Digite o salario PJ oferecido pela empresa: </label>
+    <input id="team_name" type="text" name="PJ" value=""><br>
+    <label for="CLT">Digite salario CLT oferecido pela empresa: </label>
+    <input id="team_name" type="text" name="CLT" value=""><br>
+    <label for="RBT_ANO">Digite sua expectativa de receita anual: </label>
+    <input id="RBT_ANO" type="text" name="RBT_ANO" value=""><br>
     <input type="submit" value="Calculate">
 </form>
-    <a href="{% url 'contact' %}">
-        <input type="submit" value="Saiba mais sobre nós!">
-    </a>
+
+<a href="{% url 'contact' %}">
+    <input type="submit" value="Saiba mais sobre nós!">
+</a>
 {%endblock%}

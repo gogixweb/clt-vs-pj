@@ -4,4 +4,5 @@ django-on-heroku==1.1.2
 djangorestframework==3.12.4
 Markdown==3.3.6
 django-filter==21.1
+django_on_heroku
 
