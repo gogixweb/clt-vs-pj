@@ -71,7 +71,7 @@ def index(request):
         else:
             melhor['salario'] = 'salario CLT eh melhor!!!'
     
-    return render(request, 'cltvspj/melhorsalario.html', {'melhor': melhor})
+#     return render(request, 'cltvspj/melhorsalario.html', {'melhor': melhor})
     return JsonResponse({'melhor salario': melhor['salario']})
 
 def contact(request):
