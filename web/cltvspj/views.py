@@ -22,7 +22,7 @@ def index(request):
         inss = 0     # Contribuicao para INSS (salario CLT)
         irrf = 0     # Imposto de Renda (CLT)
 
-        print(request.POST['PJ'])   
+        print(request.POST)   
 
         # SIMULACAO DOS VALORES CONSIDERANDO O ANEXO v!!!
         if(float(salario_pj) <= 180000):
@@ -62,9 +62,9 @@ def index(request):
         else:
             irrf = 0.275
 
-        formula_DAS = ((float(receita_bruta_anual)*float(ALIQ)) - float(PD))/float(receita_bruta_anual)
+        formula_DAS = ((float(receita_bruta_anual)*float(aliquota)) - float(parcela_deduzida))/float(receita_bruta_anual)
         salario_pj = float(salario_pj)*(1-float(formula_DAS))
-        salario_clt = float(salario_clt) - (float(INSS + IRRF))
+        salario_clt = float(salario_clt) - (float(inss + irrf))
 
         if(salario_pj >= salario_clt):
             melhor['salario'] = 'salario PJ eh melhor!!!'
