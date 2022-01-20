@@ -15,7 +15,7 @@ def index(request):
         # iss = request.POST['ISS']
         # irrf = request.POST['IRRF']
 
-        RBT_ANO = request.POST['RBT_ANO']   # Receita bruta anual
+        receita_bruta_anual = request.POST['receita_bruta_anual']   # Receita bruta anual
         ALIQ = 0     # Aliquota indicada no anexo enviado
         PD = 0       # Parcela a ser deduzida de acordo com o anexo enviado
         INSS = 0     # Contribuicao para INSS (salario CLT)
@@ -61,7 +61,7 @@ def index(request):
         else:
             IRRF = 0.275
 
-        formula_DAS = ((float(RBT_ANO)*float(ALIQ)) - float(PD))/float(RBT_ANO)
+        formula_DAS = ((float(receita_bruta_anual)*float(ALIQ)) - float(PD))/float(receita_bruta_anual)
         salario_pj = float(salario_pj)*(1-float(formula_DAS))
         salario_clt = float(salario_clt) - (float(INSS + IRRF))
 
