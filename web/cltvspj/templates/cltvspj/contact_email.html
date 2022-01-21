@@ -1,0 +1,22 @@
+{%extends 'base.html'%} 
+
+{%block 'title'%}
+Ellum - CLT VS PJ
+{%endblock%}
+
+{%block 'content'%}
+<h1>CLT vs PJ</h1>
+
+<form method="POST">
+    {% csrf_token %}
+    <label for="email_name">email: </label>
+    <input id="email_name" type="text" name="email_name" value=""><br>
+    <label for="subject_name">subject: </label>
+    <input id="subject_name" type="text" name="subject_name" value=""><br>
+
+    <input type="submit" value="ContactEmail">
+</form>
+    <a href="{% url 'contact' %}">
+        <input type="submit" value="Saiba mais sobre nós!">
+    </a>
+{%endblock%}

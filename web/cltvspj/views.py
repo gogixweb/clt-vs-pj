@@ -6,3 +6,6 @@ def index(request):
 
 def contact(request):
     return render(request, 'cltvspj/contact.html' )
+
+def contact_email(request):
+    return render(request, 'cltvspj/contact_email.html')

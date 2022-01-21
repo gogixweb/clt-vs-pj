@@ -8,3 +8,11 @@ class Calculator(models.Model):
 
     def __str__(self):
         return self.pj
+
+
+class ContactEmail(models.Model):
+    email = models.TextField(blank=True, null=True)
+    subject = models.TextField(blank=True, null=True)
+
+    def __str__(self):
+        return self.pj
