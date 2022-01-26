@@ -22,8 +22,6 @@ def index(request):
         inss = 0     # Contribuicao para INSS (salario CLT)
         irrf = 0     # Imposto de Renda (CLT)
 
-        print(request.POST)   
-
         # SIMULACAO DOS VALORES CONSIDERANDO O ANEXO v!!!
         if(float(salario_pj) <= 180000):
             aliquota = 0.155
