@@ -12,13 +12,27 @@ contato
         height: 44px;
         margin-left: 10px;
     }
+
+    .card-size {
+        width: 18rem;
+    }
+
+    @media screen and (max-width: 1400px) {
+        .card-size {
+            width: 17rem;
+        }
+    }
+
+    @media screen and (max-width: 1200px) {
+        .card-size {
+            width: auto;
+        }
+    }
 {%endblock%}
 
 {%block 'content'%}
 
-<nav class="nav navbar-dark bg-black justify-content-center" style="padding: 20px; background-color:black">
-    <img src={% static 'img/ellun-logo.png' %} width="120px" height="57.2px" alt="Evolute Contabilidade">
-</nav>
+
 
 <div class="container" style="margin-top: 40px;">
     
@@ -30,7 +44,7 @@ contato
     <div class="row">
 
         <div class="col-md-3"  style="margin-bottom: 30px;">
-            <div class="card">
+            <div class="card card-size">
                 <img src={% static "img/eduardo-machado.jpeg"%} class="card-img-top" alt="Eduardo Machado">
                 <div class="card-body">
                     <h5 class="card-title">Eduardo Machado</h5>
@@ -38,15 +52,15 @@ contato
                         <i>"Isso qui é um texto sem muita utilidade, porem ele está aqui"</i>
                     </p>
                     <div class="text-center">
-                        <a href="https://www.linkedin.com/in/eduardomachadorezende/"><img class="mini-logo" src={% static "img/sinal-do-linkedin.png" %}></a>
-                        <a href="https://github.com/eduumach"><img class="mini-logo" src={% static "img/GitHub-Mark-64px.png" %}></a>    
+                        <a target="_blank" href="https://www.linkedin.com/in/eduardomachadorezende/"><img class="mini-logo" src={% static "img/sinal-do-linkedin.png" %}></a>
+                        <a target="_blank" href="https://github.com/eduumach"><img class="mini-logo" src={% static "img/GitHub-Mark-64px.png" %}></a>    
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="col-md-3"  style="margin-bottom: 30px;">
-            <div class="card">
+            <div class="card card-size">
                 <img src={% static "img/fernando-mota.jpeg" %} class="card-img-top" alt="Fernando Mota">
                 <div class="card-body">
                     <h5 class="card-title">Fernando Mota</h5>
@@ -54,15 +68,15 @@ contato
                         <i>"Meu notebook esquenta tanto, que já estou fazendo misto nele."</i>
                     </p>
                     <div class="text-center">
-                        <a href="https://www.linkedin.com/in/fernando-mota-52717a120/"><img class="mini-logo" src={% static "img/sinal-do-linkedin.png" %}></a>
-                        <a href="https://github.com/f3rn4nd0000/"><img class="mini-logo" src={% static "img/GitHub-Mark-64px.png" %}></a>    
+                        <a target="_blank" href="https://www.linkedin.com/in/fernando-mota-52717a120/"><img class="mini-logo" src={% static "img/sinal-do-linkedin.png" %}></a>
+                        <a target="_blank" href="https://github.com/f3rn4nd0000/"><img class="mini-logo" src={% static "img/GitHub-Mark-64px.png" %}></a>    
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="col-md-3"  style="margin-bottom: 30px;">
-            <div class="card">
+            <div class="card card-size">
                 <img src={% static "img/ivan-rocha.jpeg" %} class="card-img-top" alt="Ivan Rocha">
                 <div class="card-body">
                     <h5 class="card-title">Ivan Rocha</h5>
@@ -70,8 +84,8 @@ contato
                         <i>"99% das pessoas riem quando apertam F13."</i>
                     </p>
                     <div class="text-center">
-                        <a href="https://www.linkedin.com/in/ivanrocha/"><img class="mini-logo" src={% static "img/sinal-do-linkedin.png" %}></a>
-                        <a href="https://github.com/ivancrneto"><img class="mini-logo" src={% static "img/GitHub-Mark-64px.png" %}></a>    
+                        <a target="_blank" href="https://www.linkedin.com/in/ivanrocha/"><img class="" src={% static "img/sinal-do-linkedin.png" %}></a>
+                        <a target="_blank" href="https://github.com/ivancrneto"><img class="mini-logo" src={% static "img/GitHub-Mark-64px.png" %}></a>    
                     </div>
                 </div>
             </div>
@@ -95,7 +109,7 @@ contato
         </div>
 
         <div class="col-md-3"  style="margin-bottom: 30px;">
-            <div class="card">
+            <div class="card card-size">
                 <img src={% static "img/william-ribeiro.jpeg" %} class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">William Ribeiro</h5>
@@ -103,13 +117,43 @@ contato
                         <i>"Eu não sou lá muito bom com Frontend, mas dou meus pulos"</i>
                     </p>
                     <div class="text-center">
-                        <a href="https://www.linkedin.com/in/williamlimaribeiro/"><img class="mini-logo" src={% static "img/sinal-do-linkedin.png" %}></a>
-                        <a href="https://github.com/wlribeiro"><img class="mini-logo" src={% static "img/GitHub-Mark-64px.png" %}></a>    
+                        <a target="_blank" href="https://www.linkedin.com/in/williamlimaribeiro/"><img class="mini-logo" src={% static "img/sinal-do-linkedin.png" %}></a>
+                        <a target="_blank" href="https://github.com/wlribeiro"><img class="mini-logo" src={% static "img/GitHub-Mark-64px.png" %}></a>    
                     </div>
                 </div>
             </div>
         </div>
         
+    </div>
+
+    <div class="row" style="margin-bottom: 60px;">
+        <div class="col-md-6 offset-3">
+            <div class="accordion" id="mailaccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Mande um email para a gente
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#mailaccordion">
+                        <div class="accordion-body">
+                            <form>
+                                <div class="mb-3">
+                                    <input type="email" class="form-control" id="email" required placeholder="Email">
+                                </div>
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" id="subject-matter" required placeholder="Assunto">
+                                </div>
+                                <div class="mb-3">
+                                    <textarea class="form-control" name="text" id="text" cols="30" rows="10" placeholder="Menssagem..."></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Enviar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
