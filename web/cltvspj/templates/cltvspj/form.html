@@ -13,12 +13,13 @@ CLT vs PJ
 
         <div class="row">
             <div class="col-md-6">
-                <form>
+                <form method="post">
+                    {% csrf_token %}
                     <div class="mb-3">
-                        <input type="text" class="form-control" id="clt" placeholder="Salario CLT">
+                        <input type="text" class="form-control" name="clt" id="clt" placeholder="Salario CLT">
                     </div>
                     <div class="mb-3">
-                        <input type="text" class="form-control" id="subject-matter" placeholder="Salario PJ">
+                        <input type="text" class="form-control" name="pj" id="pj" placeholder="Salario PJ">
                     </div>
                     <button type="submit" class="btn btn-primary">Calcular</button>
                 </form>

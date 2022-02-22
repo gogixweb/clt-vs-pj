@@ -32,8 +32,6 @@ contato
 
 {%block 'content'%}
 
-
-
 <div class="container" style="margin-top: 40px;">
     
     <div class="row">
@@ -135,17 +133,19 @@ contato
                             Mande um email para a gente
                         </button>
                     </h2>
+                    
                     <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#mailaccordion">
                         <div class="accordion-body">
-                            <form>
+                            <form method="post">
+                                {% csrf_token %}
                                 <div class="mb-3">
-                                    <input type="email" class="form-control" id="email" required placeholder="Email">
+                                    <input type="email" class="form-control" value=""  id="email" required placeholder="Email">
                                 </div>
                                 <div class="mb-3">
                                     <input type="text" class="form-control" id="subject-matter" required placeholder="Assunto">
                                 </div>
                                 <div class="mb-3">
-                                    <textarea class="form-control" name="text" id="text" cols="30" rows="10" placeholder="Menssagem..."></textarea>
+                                    <textarea class="form-control" value="content" name="text" id="text" cols="30" rows="10" placeholder="Mensagem..."></textarea>
                                 </div>
                                 <button type="submit" class="btn btn-primary">Enviar</button>
                             </form>
