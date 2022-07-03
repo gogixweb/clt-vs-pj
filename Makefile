@@ -11,4 +11,4 @@ build:
 	cd frontend && npm run build 
 
 server:
-	cd frontend && npm run serve
+	cd frontend && npm run start
