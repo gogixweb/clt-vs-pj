@@ -1,38 +1,52 @@
-<h1>clt-vs-pj</h1>
+# CLT vs PJ
 
-<h2>Configurando o projeto:</h2>
+## Introdução
+...
+## Refêrencias
 
-<p>
-Para esse projeto é necessario ter instalado o python a partir da versão <a href="https://www.python.org/downloads/">3.8</a> e o <a href= "https://pypi.org/project/pip/">pip 3</a>
+Este projeto foi desenvolvido usando as seguintes tecnologias:
+- [Python](https://www.python.org/downloads/)
+- [Django](https://www.djangoproject.com/)
+- [Django Rest Framework](https://www.django-rest-framework.org/)
+- [React](https://pt-br.reactjs.org/)
+
+## Configurando o projeto:
+
+Clone o repositorio para o seu ambiente local
+```bash
+git clone https://github.com/gogixweb/clt-vs-pj.git
+```
 </p>
 
-<h3>Primeiro passo</h3>
+### Rodando o projeto
 
-<p>
-Nós recomendamos o uso de um <i>virtual enviroment</i>, para envitar conflitos com as versões das bibliotecas utilizadas. Você pode utilizar essa <a href="https://docs.python.org/3/library/venv.html">biblioteca</a> para criar o seu <i>enviroment</i>.
-</br>
-Usando o venv, você pode usar o seguinte comando na raiz do projeto:
-<blockquote>python -m venv venv</blockquote>
-</p>
+O projeto é um [monorepo](https://pt.stackoverflow.com/questions/452607/o-que-%C3%A9-um-monorepo-quais-s%C3%A3o-as-suas-vantagens-e-desvantagens), então é possivel encontrar a api no pasta backend e o desenvolvimento do front na pasta frontend
 
-<h3>Segundo passo</h3>
+### Frontend local
+Para acessar o frontend da aplicação através do django é necessario rodar o comando de build dentro da pasta "frontend"
+```bash
+cd frontend && npm run build
+```
+ou 
+```bash
+make build
+```
+### Migrations
+Você precisa rodar o comando de migração para criar as tabelas necessarias no banco de dados
 
-<p>
-Neste passo você pode ativar o seu <i>virtual env</i> e executar o comando abaixo para instalar todas as dependencias necessarias
-<blockquote>
-pip install -r requirements.txt
-</blockquote>
-</p>
-
-<h3>Terceiro passo</h3>
-
-Você precisa rodar o comando de migração para criar as tabelas no banco de dados
-
-<blockquote>
+```bash
 python manage.py migrate
-</blockquote>
-
+```
+ou 
+```bash
+make migrate
+```
+### Iniciando o servidor
 Execute o comando para iniciar o servidor web no localhost:
-<blockquote>
+```bash
 python manage.py runserver
-</blockquote>
+```
+ou
+```bash
+make run
+```

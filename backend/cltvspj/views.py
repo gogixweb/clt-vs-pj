@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import JsonResponse
-from web.cltvspj.models import Calculator, Email
+from backend.cltvspj.models import Calculator, Email
 from abc import ABC, abstractmethod
 
 # Create your views here.

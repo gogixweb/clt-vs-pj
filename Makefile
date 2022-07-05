@@ -6,3 +6,9 @@ migrate:
 
 run:
 	python manage.py runserver
+
+build:
+	cd frontend && npm run build 
+
+server:
+	cd frontend && npm run serve
