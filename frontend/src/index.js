@@ -4,11 +4,14 @@ import reportWebVitals from './performance/reportWebVitals';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
+import Page404 from './pages/404';
+import './assets/css/style.css';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 
 
-          
+
   <BrowserRouter>
     <Routes>
       <Route path='/' element={<Home />} />
@@ -16,9 +19,7 @@ root.render(
       <Route
       path="*"
       element={
-        <main style={{ padding: "1rem" }}>
-          <p>There's nothing here!</p>
-        </main>
+        <Page404 />
       }
     />
     </Routes>
